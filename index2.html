@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Produtos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos para o sistema de filtros */
+        .product {
+            display: none; /* Oculta todos os produtos inicialmente */
+        }
+        .product.show {
+            display: block; /* Mostra produtos filtrados */
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-5">
+        <h1>Catálogo de Produtos</h1>
+    </header>
+
+    <main class="container my-5">
+        <h2>Filtrar Produtos</h2>
+        <select id="filter" class="form-control mb-3" aria-label="Filtro de produtos">
+            <option value="all">Todos</option>
+            <option value="aluminio">Alumínio</option>
+            <option value="acessorios">Acessórios</option>
+        </select>
+
+        <div id="productList" class="row">
+            <article class="product aluminio col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Produto de Alumínio 1</h5>
+                        <p class="card-text">Descrição do Produto de Alumínio 1.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="product aluminio col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Produto de Alumínio 2</h5>
+                        <p class="card-text">Descrição do Produto de Alumínio 2.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="product acessorios col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Acessório 1</h5>
+                        <p class="card-text">Descrição do Acessório 1.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="product acessorios col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Acessório 2</h5>
+                        <p class="card-text">Descrição do Acessório 2.</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>© 2024 GL Alumínios. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Script para filtrar produtos
+        $(document).ready(function() {
+            $('#filter').on('change', function() {
+                var selectedFilter = $(this).val();
+                $('.product').removeClass('show'); // Oculta todos os produtos
+ if (selectedFilter === 'all') {
+                    $('.product').addClass('show'); // Mostra todos os produtos
+                } else {
+                    $('.product.' + selectedFilter).addClass('show'); // Mostra apenas os produtos filtrados
+                }
+            });
+        });
+    </script>
+</body>
+</html>

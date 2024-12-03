@@ -6,89 +6,66 @@
     <title>GL Alumínios</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Adicionando estilos de transição */
+        .fade {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .fade.show {
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
-    <header class="bg-dark text-white text-center py-4">
-        <h1>GL Alumínios</h1>
-        <nav>
-            <ul class="nav justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#home">Início</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#produtos">Produtos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#sobre">Sobre Nós</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#contato">Contato</a>
-                </li>
-            </ul>
-        </nav>
+    <header class="bg-primary text-white text-center py-5">
+        <h1><span class="gl">GL</span> <span class="alum">Alumínios</span></h1>
+        <p>Qualidade e confiança em produtos de alumínio</p>
     </header>
 
-    <section id="home" class="text-center py-5">
-        <div class="container">
-            <h2>Bem-vindo à GL Alumínios</h2>
-            <p>Qualidade e tradição no mercado de alumínio.</p>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">GL Alumínios</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index2.html">Catálogo de Produtos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#historia">Nossa História</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contato">Contato</a>
+                </li>
+            </ul>
         </div>
-    </section>
+    </nav>
 
-    <section id="produtos" class="py-5">
-        <div class="container">
-            <h2 class="text-center">Nossos Produtos</h2>
-            <div class="row">
-                <!-- Exemplo de produto -->
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <img src="path/to/imagem-produto.jpg" class="card-img-top" alt="Produto 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Produto 1</h5>
-                            <p class="card-text">Descrição do produto 1.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Adicione mais produtos aqui -->
-            </div>
-        </div>
-    </section>
-
-    <section id="sobre" class="bg-light py-5">
-        <div class="container">
-            <h2 class="text-center">Sobre Nós</h2>
-            <p>Na Indústria de Alumínio GL Alumínios se destaca pela qualidade e satisfação do cliente.</p>
-        </div>
-    </section>
-
-    <section id="contato" class="py-5">
-        <div class="container">
-            <h2 class="text-center">Contato</h2>
-            <form>
-                <div class="form-group">
-                    <label for="nome">Nome:</label>
-                    <input type="text" class="form-control" id="nome" name="nome" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="mensagem">Mensagem:</label>
-                    <textarea class="form-control" id="mensagem" name="mensagem" required></textarea>
-                </div>
+    <main class="container my-5">
+        <section id="contato">
+            <h2>Entre em Contato Conosco</h2>
+            <form id="contactForm">
+                <input type="text" id="name" class="form-control mb-3" placeholder="Seu Nome" required>
+                <input type="email" id="email" class="form-control mb-3" placeholder="Seu E-mail" required>
+                <textarea id="message" class="form-control mb-3" rows="4" placeholder="Sua Mensagem" required></textarea>
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
-        </div>
-    </section>
+            <div id="messageStatus" class="fade"></div>
+        </section>
+    </main>
 
     <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2024 GL Alumínios. Todos os direitos reservados.</p>
+        <p>© 2023 GL Alumínios. Todos os direitos reservados.</p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="javascrip.js"></script>
+    <script src="script.js"></script>
 </body>
-</html>
+</html> 

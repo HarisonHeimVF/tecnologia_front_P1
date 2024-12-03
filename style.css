@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif; /* Fonte Roboto para todo o site */
+    background-color: #e9ecef; /* Fundo mais claro e neutro */
+    color: #333333; /* Texto em cinza escuro */
+    text-align: center; /* Centraliza todo o texto */
+}
+
+header {
+    background: #007bff; /* Azul claro para o cabeçalho */
+    color: #FFFFFF; /* Texto branco no cabeçalho */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Sombras no texto do cabeçalho */
+}
+
+h1 {
+    font-size: 3rem; /* Tamanho maior para o título */
+}
+
+h1 span.gl {
+    color: #FF0000; /* Vermelho para as iniciais GL */
+}
+
+h1 span.alum {
+    color: #A0A0A0; /* Cinza metálico para Alumínios */
+}
+
+footer {
+    background: #343a40; /* Fundo escuro para o rodapé */
+    color: #FFFFFF; /* Texto branco no rodapé */
+}
+
+.navbar {
+    justify-content: center; /* Centraliza os itens da navbar */
+}
+
+.nav-link {
+    margin: 0 15px; /* Espaçamento entre os links do menu */
+}
+
+.card {
+    border: 1px solid #A0A0A0; /* Borda cinza metálica para os cartões */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombras nos cartões */
+}
+
+.card-title {
+    color: #007bff; /* Azul claro para os títulos dos produtos */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombras no título dos produtos */
+}
+
+.carousel-item img {
+    border-radius: 0.5rem; /* Bordas arredondadas para as imagens do carrossel */
+}
+
+h2, h3 {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombras nos subtítulos */
+}
+
+section {
+    background-color: #ffffff; /* Fundo branco para as seções */
+    border-radius: 0.5rem; /* Bordas arredondadas para as seções */
+    padding: 20px; /* Espaçamento interno */
+    margin-bottom: 20px; /* Espaçamento entre seções */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombras nas seções */
+}
+
+.btn {
+    background-color: #007bff; /* Cor de fundo azul para botões */
+    color: #fff; /* Texto branco para botões */
+    border-radius: 5px; /* Bordas arredondadas para botões */
+    padding: 10px 20px; /* Espaçamento interno dos botões */
+    transition: background-color 0.3s; /* Transição suave para mudança de cor */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Cor mais escura ao passar o mouse */
+}
