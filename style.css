@@ -1,77 +1,113 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* Resetando algumas margens e preenchimentos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    font-family: 'Roboto', sans-serif; /* Fonte Roboto para todo o site */
-    background-color: #e9ecef; /* Fundo mais claro e neutro */
-    color: #333333; /* Texto em cinza escuro */
-    text-align: center; /* Centraliza todo o texto */
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
+/* Estilizando o cabeçalho */
 header {
-    background: #007bff; /* Azul claro para o cabeçalho */
-    color: #FFFFFF; /* Texto branco no cabeçalho */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Sombras no texto do cabeçalho */
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
 }
 
-h1 {
-    font-size: 3rem; /* Tamanho maior para o título */
+header .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-h1 span.gl {
-    color: #FF0000; /* Vermelho para as iniciais GL */
+/* Banner de imagem */
+.banner img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
 }
 
-h1 span.alum {
-    color: #A0A0A0; /* Cinza metálico para Alumínios */
-}
-
-footer {
-    background: #343a40; /* Fundo escuro para o rodapé */
-    color: #FFFFFF; /* Texto branco no rodapé */
-}
-
-.navbar {
-    justify-content: center; /* Centraliza os itens da navbar */
-}
-
-.nav-link {
-    margin: 0 15px; /* Espaçamento entre os links do menu */
-}
-
+/* Estilizando os cards de produtos */
 .card {
-    border: 1px solid #A0A0A0; /* Borda cinza metálica para os cartões */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombras nos cartões */
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card-title {
-    color: #007bff; /* Azul claro para os títulos dos produtos */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombras no título dos produtos */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.carousel-item img {
-    border-radius: 0.5rem; /* Bordas arredondadas para as imagens do carrossel */
+.card-img-top {
+    border-radius: 8px 8px 0 0;
+    height: 200px;
+    object-fit: cover;
 }
 
-h2, h3 {
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombras nos subtítulos */
-}
-
-section {
-    background-color: #ffffff; /* Fundo branco para as seções */
-    border-radius: 0.5rem; /* Bordas arredondadas para as seções */
-    padding: 20px; /* Espaçamento interno */
-    margin-bottom: 20px; /* Espaçamento entre seções */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombras nas seções */
-}
-
+/* Botões */
 .btn {
-    background-color: #007bff; /* Cor de fundo azul para botões */
-    color: #fff; /* Texto branco para botões */
-    border-radius: 5px; /* Bordas arredondadas para botões */
-    padding: 10px 20px; /* Espaçamento interno dos botões */
-    transition: background-color 0.3s; /* Transição suave para mudança de cor */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #0056b3; /* Cor mais escura ao passar o mouse */
+    background-color: #0056b3;
+}
+
+/* Rodapé */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+}
+
+/* Estilizando o catálogo de produtos */
+section.container {
+    padding: 30px;
+    text-align: center; /* Centraliza o texto das seções */
+}
+
+/* Centraliza o título "A nossa Empresa" */
+h3.text-center {
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-collapse {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .banner img {
+        height: 250px;
+    }
+
+    .navbar-brand {
+        font-size: 1.3rem;
+    }
+}
+
+/* Adicionando a responsividade para o 'Sobre Nós' */
+html {
+    scroll-behavior: smooth;
 }
