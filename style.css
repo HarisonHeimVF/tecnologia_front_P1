@@ -23,6 +23,12 @@ header .navbar-brand {
     font-weight: bold;
 }
 
+/* Logo */
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Banner de imagem */
 .banner img {
     width: 100%;
@@ -78,8 +84,13 @@ h3.text-center {
     font-size: 2rem;
 }
 
-/* Responsividade */
+/* Adicionando responsividade para os cards do catálogo */
 @media (max-width: 768px) {
+    .col-md-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
     .card {
         margin-bottom: 20px;
     }
@@ -94,6 +105,11 @@ h3.text-center {
 }
 
 @media (max-width: 576px) {
+    .col-md-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
     h2 {
         font-size: 1.5rem;
     }
@@ -110,4 +126,42 @@ h3.text-center {
 /* Adicionando a responsividade para o 'Sobre Nós' */
 html {
     scroll-behavior: smooth;
+}
+
+/* Melhorias adicionais de responsividade */
+@media (max-width: 992px) {
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-collapse {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1200px) {
+    .logo img {
+        max-width: 250px; /* Ajusta o tamanho da logo em telas grandes */
+    }
+}
+/* Estilizando os links do navbar com uma borda */
+.navbar-nav .nav-link {
+    border: 2px solid transparent; /* Inicialmente, a borda é transparente */
+    border-radius: 5px; /* Arredonda os cantos */
+    padding: 8px 16px; /* Adiciona espaço ao redor do texto */
+    transition: border-color 0.3s ease, background-color 0.3s ease; /* Animação suave ao passar o mouse */
+}
+
+/* Adicionando uma borda visível ao passar o mouse */
+.navbar-nav .nav-link:hover {
+    border-color: #007bff; /* Cor da borda ao passar o mouse (azul) */
+    background-color: rgba(0, 123, 255, 0.1); /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilo adicional para quando o link estiver ativo */
+.navbar-nav .nav-link.active {
+    border-color: #007bff; /* Cor da borda quando o item está ativo */
+    background-color: rgba(0, 123, 255, 0.1); /* Cor de fundo do item ativo */
 }
