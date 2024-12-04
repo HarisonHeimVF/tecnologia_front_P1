@@ -165,3 +165,8 @@ html {
     border-color: #007bff; /* Cor da borda quando o item está ativo */
     background-color: rgba(0, 123, 255, 0.1); /* Cor de fundo do item ativo */
 }
+.logo {
+    background-color: #343a40; /* Mesma cor do footer */
+    padding: 10px; /* Espaço ao redor da logo */
+    border-radius: 8px; /* Opcional: para arredondar as bordas */
+}
